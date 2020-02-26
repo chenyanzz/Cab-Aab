@@ -1,6 +1,8 @@
 <html>
     <head>
         <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0,minimum-scale=1.0,user-scalable=yes">
+
         <title>排列组合计算器</title>
         <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML-full"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -47,10 +49,23 @@
             }
         </script>
         
+        <style>
+            #outer {
+                width: 50%;
+                height: 20%;
+            }
+            #inner {
+                margin-left: 25%; 
+                margin-top: 40%;
+            }
+        </style>
+
+
     </head>
     
     <body>
-        <div class="formula">
+        <div id="outer">
+        <div class="formula" id="inner">
             <label>排列公式：</label> <span>`A_a^b=`</span> <input type="number" id="ans_A" disabled=true>
             <br/>
             <label>组合公式：</label> <span>`C_a^b=`</span> <input type="number" id="ans_C" disabled=true>
@@ -60,6 +75,7 @@
             <label>b=</label> <input type="number" id="b"/>
             <br/>
             <button onclick="calc()">计算</button>
+        </div>
         </div>
     </body>
 
