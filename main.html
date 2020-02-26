@@ -18,8 +18,8 @@
                     return;
                 }
 
-                var a = $("#a").val();
-                var b = $("#b").val();
+                var a = parseInt($("#a").val());
+                var b = parseInt($("#b").val());
 
                 if( !(isInt(a) && a>=0 && isInt(b) && b>=0) ){
                     alert("a和b要非负整数！");
