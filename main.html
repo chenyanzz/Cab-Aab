@@ -8,20 +8,13 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     
         <script type="text/javascript">
-            function isInt(obj) {
-                return obj%1 === 0
-            }
 
             function calc(){
-                if( !($("#a").val() && $("#b").val()) ){
-                    alert("请输入a和b的值！");
-                    return;
-                }
-
+                
                 var a = parseInt($("#a").val());
                 var b = parseInt($("#b").val());
 
-                if( !(isInt(a) && a>=0 && isInt(b) && b>=0) ){
+                if( !(a && a>=0 && b && b>=0) ){
                     alert("a和b要非负整数！");
                     return;
                 }
